@@ -11,6 +11,10 @@ body {
   margin: 0;
 }
 
+.flex-container {
+  display: flex;
+}
+
 .flex {
   display: flex;
 }
@@ -35,25 +39,49 @@ header {
   top: 0;
   width: 100%;
   background-color: white;
-  border-bottom: 1px solid grey;
-} /* do you need z-index here */
+  border-bottom: 1px solid lightgrey;
+}
 
-nav {
+header .desktop-content {
+  display: flex;
+  height: 64px;
+  align-items: center;
+  padding: 0 24px;
+}
+
+header .desktop-content .logo {
   display: flex;
   align-items: center;
+  flex-grow: 1;
+}
+
+header .desktop-content li {
+  display: inline;
+  padding-left: 16px;
+}
+
+header .mobile-content ul {
+  display: flex;
   height: 64px;
 }
 
-nav .logo{
-  align-items: center;
-  flex-grow: 1;
-  height: 32px;
+header .mobile-content li {
+  margin: auto;
 }
 
-nav ul li {
-  display: inline;
-  padding-right: 16px;
+@media only screen and (min-width: 701px) {
+  header .mobile-content {
+    display: none;
+  }
 }
+
+@media only screen and (max-width: 700px) {
+  header .desktop-content {
+    display: none;
+  }
+}
+
+
 
 /* Main Content */
 
