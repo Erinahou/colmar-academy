@@ -1,0 +1,243 @@
+/* Universal Style */
+
+html {
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  color: #4A4A4A;
+}
+
+body {
+  margin: 0;
+}
+
+.flex {
+  display: flex;
+}
+
+.container {
+  margin: 0 24px;
+}
+
+a {
+  text-decoration: none;
+  color: DodgerBlue;
+}
+
+h1, h2, h3, p {
+  margin: 0;
+}
+
+/* Header */
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  border-bottom: 1px solid grey;
+} /* do you need z-index here */
+
+nav {
+  display: flex;
+  align-items: center;
+  height: 64px;
+}
+
+nav .logo{
+  align-items: center;
+  flex-grow: 1;
+  height: 32px;
+}
+
+nav ul li {
+  display: inline;
+  padding-right: 16px;
+}
+
+/* Main Content */
+
+.main-content {
+  margin-top: 64px;
+}
+
+/* Banner */
+
+#banner {
+  background-color: lightgrey;
+}
+
+#banner .container {
+  padding: 32px 0;
+}
+
+#banner .banner-image {
+  width: 60%;
+}
+
+#banner .banner-image img {
+  width: 100%;
+}
+
+#banner .text {
+  width: 40%;
+  align-items: center;
+  padding-left: 24px;
+}
+
+.text-content {
+  width: 80%;
+}
+
+.text-content .button {
+  justify-content: center;
+  border-radius: 2px;
+  background-color: #4A4A4A;
+  width: 100%;
+  padding: 8px 0;
+} /* is it better to avoid flex for buttons? */
+
+.text-content .button a {
+  color: white;
+}
+
+/* Academy Info */
+
+#academy-info .testimonial {
+  width: 60%;
+  padding: 32px 24px;
+}
+
+#academy-info .testimonial img {
+  width: 100%;
+}
+
+#academy-info .testimonial h1 {
+  padding: 32px 0 24px 0;
+}
+
+#academy-info .info-list {
+  width: 40%;
+  padding-top: 16px;
+  border-left: 1px solid lightgrey;
+}
+
+#academy-info .info-section {
+  padding: 16px;
+}
+
+#academy-info .info-section .image-container {
+  width: 35%;
+}
+
+#academy-info .info-section .image-container img {
+  width: 100%;
+  height: auto;
+}
+
+#academy-info .info-section .text-content {
+  width: 65%; /* do you need to specify percentage if you already specified the other half */
+  padding-left: 20px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#academy-info .info-section .text-content p {
+  padding: 8px 0;
+}
+
+/* Courses */
+
+#courses {
+  background-color: lightgrey;
+}
+
+#courses h1 {
+  text-align: center;
+  padding: 32px 0;
+}
+
+.course-items {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 32px;
+}
+
+#courses .item {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  border: 1px solid black;
+  background-color: white;
+}
+
+#courses .item img {
+  width: 100%;
+  height: auto;
+}
+
+#courses .item .text-content {
+  padding: 16px 16px 32px 16px;
+}
+
+#courses .item.center {
+  margin: 0 35px;
+} /* why does it work when you stick to classes togehter like this? */
+
+/* Thesis Video */
+
+#thesis.container {
+  padding: 32px 0;
+}
+
+#thesis h1 {
+  text-align: center;
+  padding-bottom: 32px;
+}
+
+#thesis .thesis-video {
+  width: 60%;
+  margin-right: 24px;
+}
+
+.thesis-video video {
+  width: 100%;
+  height: auto;
+}
+
+.thesis-list {
+  width: 40%;
+}
+
+#thesis .thesis-item {
+  padding: 16px;
+  background-color: lightgrey;
+}
+
+.thesis-item .text-content {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ padding-left: 16px;
+}
+
+.thesis-list .image-container {
+  width: 35%;
+  height: auto;
+}
+
+.thesis-list .image-container img {
+  width: 100%;
+}
+
+/* Footer */
+
+footer {
+  justify-content: space-between;
+  border-top: 1px solid lightgrey;
+  padding: 16px 0 64px 0;
+}
+
+.terms-and-privacy span {
+  padding-left: 16px;
+}
