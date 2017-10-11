@@ -81,8 +81,6 @@ header .mobile-content li {
   }
 }
 
-
-
 /* Main Content */
 
 .main-content {
@@ -92,86 +90,144 @@ header .mobile-content li {
 /* Banner */
 
 #banner {
+  display: flex;
+  padding: 32px 24px;
   background-color: lightgrey;
 }
 
-#banner .container {
-  padding: 32px 0;
-}
-
-#banner .banner-image {
+#banner .image-container {
   width: 60%;
 }
 
-#banner .banner-image img {
+#banner .image-container img {
   width: 100%;
+}
+
+#banner .text-container {
+  display: flex;
+  width: 40%;
+  align-items: center;
 }
 
 #banner .text {
-  width: 40%;
-  align-items: center;
+  width: 100%;
   padding-left: 24px;
 }
 
-.text-content {
-  width: 80%;
-}
-
-.text-content .button {
-  justify-content: center;
-  border-radius: 2px;
+#banner .start-button {
+  padding: 8px 0;
   background-color: #4A4A4A;
   width: 100%;
-  padding: 8px 0;
-} /* is it better to avoid flex for buttons? */
+  text-align: center;
+  margin-top: 24px;
+}
 
-.text-content .button a {
+#banner .start-button a {
   color: white;
+}
+
+@media only screen and (max-width: 700px){
+  #banner {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  #banner .image-container {
+    width: 100%;
+  }
+
+  #banner .text-container {
+    width: 100%;
+  }
+
+  #banner .text {
+    padding: 32px 16px;
+  }
 }
 
 /* Academy Info */
 
-#academy-info .testimonial {
-  width: 60%;
-  padding: 32px 24px;
+#academy-info {
+  display: flex;
 }
 
-#academy-info .testimonial img {
+#academy-info .testimonial-container {
+  width: 60%;
+  padding: 32px 24px;s
+}
+
+#academy-info .testimonial-container img {
   width: 100%;
 }
 
-#academy-info .testimonial h1 {
-  padding: 32px 0 24px 0;
-}
-
-#academy-info .info-list {
+#academy-info .info-modules-container {
   width: 40%;
-  padding-top: 16px;
+  padding: 16px 0;
   border-left: 1px solid lightgrey;
 }
 
-#academy-info .info-section {
+#academy-info .info-module {
+  display: flex;
   padding: 16px;
 }
 
-#academy-info .info-section .image-container {
+#academy-info .info-module .desktop.image-container {
   width: 35%;
 }
 
-#academy-info .info-section .image-container img {
+#academy-info .info-module .desktop.image-container img {
+  width: 100%;
+}
+
+#academy-info .info-module .mobile.image-container {
+  width: 100%;
+}
+
+#academy-info .info-module .mobile.image-container img {
   width: 100%;
   height: auto;
 }
 
-#academy-info .info-section .text-content {
-  width: 65%; /* do you need to specify percentage if you already specified the other half */
-  padding-left: 20px;
-  flex-direction: column;
-  justify-content: center;
+#academy-info .info-module .text-container {
+  display: flex;
+  align-items: center;
+  width: 65%;
 }
 
-#academy-info .info-section .text-content p {
-  padding: 8px 0;
+#academy-info .info-module .text-container .text {
+  padding-left: 24px;
+}
+
+@media only screen and (min-width: 701px) {
+  #academy-info .info-module .mobile.image-container {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  #academy-info .info-module .desktop.image-container {
+    display: none;
+  }
+
+  #academy-info .testimonial-container {
+    display: none;
+  }
+
+  #academy-info .info-modules-container {
+    width: 100%;
+  }
+
+  #academy-info .info-module {
+    flex-direction: column;
+  }
+
+  #academy-info .info-module .text-container {
+    width: 100%;
+  }
+
+  #academy-info .info-module .text-container .text {
+    padding: 32px 16px;
+  }
 }
 
 /* Courses */
