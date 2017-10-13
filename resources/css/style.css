@@ -1,35 +1,14 @@
 /* Universal Style */
 
 html {
-  font-size: 18px;
+  font-size: 16px;
   font-family: "Montserrat", sans-serif;
-  font-weight: 400;
   color: #4A4A4A;
-}
-
-body {
-  margin: 0;
-}
-
-.flex-container {
-  display: flex;
-}
-
-.flex {
-  display: flex;
-}
-
-.container {
-  margin: 0 24px;
 }
 
 a {
   text-decoration: none;
   color: DodgerBlue;
-}
-
-h1, h2, h3, p {
-  margin: 0;
 }
 
 /* Header */
@@ -153,7 +132,7 @@ header .mobile-content li {
 
 #academy-info .testimonial-container {
   width: 60%;
-  padding: 32px 24px;s
+  padding: 32px 24px;
 }
 
 #academy-info .testimonial-container img {
@@ -195,7 +174,7 @@ header .mobile-content li {
 }
 
 #academy-info .info-module .text-container .text {
-  padding-left: 24px;
+  padding-left: 16px;
 }
 
 @media only screen and (min-width: 701px) {
@@ -233,45 +212,76 @@ header .mobile-content li {
 /* Courses */
 
 #courses {
-  background-color: lightgrey;
+  padding: 32px 72px;
+  background: lightgrey;
 }
 
 #courses h1 {
   text-align: center;
-  padding: 32px 0;
-}
-
-.course-items {
-  display: flex;
-  justify-content: center;
   padding-bottom: 32px;
 }
 
-#courses .item {
+#courses .first-row, .second-row {
   display: flex;
-  flex-direction: column;
-  width: 350px;
-  border: 1px solid black;
+}
+
+#courses .second-row {
+  margin-top: 32px;
+}
+
+#courses .course-item {
+  width: 100%;
   background-color: white;
 }
 
-#courses .item img {
+#courses .course-item img {
   width: 100%;
   height: auto;
 }
 
-#courses .item .text-content {
-  padding: 16px 16px 32px 16px;
+#courses .course-item.center {
+  margin: 0 32px;
 }
 
-#courses .item.center {
-  margin: 0 35px;
-} /* why does it work when you stick to classes togehter like this? */
+#courses .course-item .text {
+  padding: 16px 16px 24px 16px;
+}
 
-/* Thesis Video */
+@media only screen and (min-width: 701px) {
+  #courses .mobile {
+    display: none;
+  }
+}
 
-#thesis.container {
-  padding: 32px 0;
+@media only screen and (max-width: 700px) {
+  #courses {
+    background-color: white;
+    border-top: 1px solid lightgrey;
+    padding: 32px 16px;
+  }
+
+  #courses h1 {
+    padding-bottom: 8px;
+  }
+
+  #courses .desktop {
+    display: none;
+  }
+
+  #courses .mobile ul li {
+    margin-top: 8px;
+  }
+
+  #courses .mobile li h2 {
+    background-color: lightgrey;
+    padding: 24px 16px;
+  }
+}
+
+/* Thesis Exhibit */
+
+#thesis {
+  padding: 32px 0 32px 24px;
 }
 
 #thesis h1 {
@@ -279,49 +289,88 @@ header .mobile-content li {
   padding-bottom: 32px;
 }
 
-#thesis .thesis-video {
+#thesis .thesis-container {
+  display: flex;
+}
+
+#thesis .video-thesis {
   width: 60%;
-  margin-right: 24px;
 }
 
-.thesis-video video {
+#thesis .video-thesis video {
   width: 100%;
   height: auto;
 }
 
-.thesis-list {
+#thesis .thesis-modules-container {
   width: 40%;
+  border-left: 1px solid lightgrey;
+  margin-left: 24px;
 }
 
-#thesis .thesis-item {
+#thesis .thesis-module {
+  display: flex;
   padding: 16px;
-  background-color: lightgrey;
 }
 
-.thesis-item .text-content {
- display: flex;
- flex-direction: column;
- justify-content: center;
- padding-left: 16px;
-}
-
-.thesis-list .image-container {
+#thesis .thesis-module .image-container {
   width: 35%;
+}
+
+#thesis .thesis-module .image-container img {
+  width: 100%;
   height: auto;
 }
 
-.thesis-list .image-container img {
-  width: 100%;
+#thesis .thesis-module .text-container {
+  display: flex;
+  align-items: center;
+  width: 65%;
+}
+
+#thesis .text-container .text {
+  padding-left: 16px;
+}
+
+@media only screen and (max-width: 700px) {
+  #thesis {
+    padding-left: 0;
+  }
+
+  .thesis-modules-container {
+    display: none;
+  }
+
+  #thesis .video-thesis {
+    width: 100%;
+  }
+
+  #thesis .video-thesis .text-container {
+    display: none;
+  }
+
 }
 
 /* Footer */
 
-footer {
+footer .content {
+  display: flex;
   justify-content: space-between;
+  margin: 0 24px;
   border-top: 1px solid lightgrey;
-  padding: 16px 0 64px 0;
+  padding: 16px 0 32px 0;
 }
 
-.terms-and-privacy span {
-  padding-left: 16px;
+footer .terms-and-privacy span {
+  padding: 16px;
+}
+
+@media only screen and (max-width: 700px) {
+  footer .content {
+    border-top: none;
+  }
+
+  footer .terms-and-privacy {
+    display: none;
+  }
 }
