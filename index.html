@@ -1,7 +1,7 @@
 <!-- Notes
 - Perhaps add alt tags
-- Change px into rem when possible
 - Simplify Academy Info Section
+- Thesis and info section can share the same css?
 - Make sure tag labels are consistent
 - Make sure buttons or sections that should be links are links
 - See whether styling is ok to be done on media queries vs outside media queries
@@ -94,7 +94,7 @@
               <div class="text">
                 <h2>Orientation date</h3>
                 <p>Tue 10/11 & Wed 10/12: 8am-3pm</p>
-                <p><a>Read more</a><p>
+                <p class="read-more"><a href="#">Read more</a><p>
               </div>
             </div>
           </div>
@@ -110,7 +110,7 @@
               <div class="text">
                 <h2>Our campus</h3>
                 <p>Find which campus is close by you</p>
-                <p><a>Read more</a><p>
+                <p class="read-more"><a href="#">Read more</a><p>
               </div>
             </div>
           </div>
@@ -126,7 +126,7 @@
               <div class="text">
                 <h2>Our guest lecture</h3>
                 <p>Join a keynote with Oliver Sack about music in medical treatment</p>
-                <p><a>Read more</a><p>
+                <p class="read-more"><a href="#">Read more</a><p>
               </div>
             </div>
           </div>
@@ -143,7 +143,7 @@
               <img src="resources/assets/images/course-software.jpg">
               <div class="text">
                 <h2>Software Engineering</h2>
-                <p>Courses</p>
+                <p class="label">Courses</p>
                 <p>Web Development, Mobile Development, iOT, APIs</p>
               </div>
             </div>
@@ -151,7 +151,7 @@
               <img src="resources/assets/images/course-computer-art.jpg">
               <div class="text">
                 <h2>Computer Art</h2>
-                <p>Courses</p>
+                <p class="label">Courses</p>
                 <p>Imaging & Design, Web Design, Motion Graphics & Visual Effects, Computer Animation</p>
               </div>
             </div>
@@ -159,7 +159,7 @@
               <img src="resources/assets/images/course-design.jpg">
               <div class="text">
                 <h2>Design</h2>
-                <p>Courses</p>
+                <p class="label">Courses</p>
                 <p>User Experience Design, User Research, Visual Design</p>
               </div>
             </div>
@@ -170,7 +170,7 @@
               <img src="resources/assets/images/course-data.jpg">
               <div class="text">
                 <h2>Data</h2>
-                <p>Courses</p>
+                <p class="label">Courses</p>
                 <p>Data Science, Big Data, SQL, Data Visualization</p>
               </div>
             </div>
@@ -178,15 +178,15 @@
               <img src="resources/assets/images/course-business.jpg">
               <div class="text">
                 <h2>Computer Art</h2>
-                <p>Courses</p>
+                <p class="label">Courses</p>
                 <p>Product Development, Business Development, Startup</p>
               </div>
             </div>
             <div class="course-item">
               <img src="resources/assets/images/course-marketing.jpg">
               <div class="text">
-                <h2>Design</h2>
-                <p>Courses</p>
+                <h2 class="course-title"><a href="#">Design</a></h2>
+                <p class="label">Courses</p>
                 <p>Analytics, Content Marketing, Mobile Marketing</p>
               </div>
             </div>

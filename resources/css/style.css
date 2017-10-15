@@ -8,7 +8,22 @@ html {
 
 a {
   text-decoration: none;
-  color: DodgerBlue;
+  color: #4A4A4A;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1.25;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+p {
+  line-height: 1.5;
 }
 
 /* Header */
@@ -25,7 +40,7 @@ header .desktop-content {
   display: flex;
   height: 64px;
   align-items: center;
-  padding: 0 24px;
+  padding: 0 1.5rem;
 }
 
 header .desktop-content .logo {
@@ -37,6 +52,10 @@ header .desktop-content .logo {
 header .desktop-content li {
   display: inline;
   padding-left: 16px;
+}
+
+header .desktop-content li a {
+  color: #4A4A4A;
 }
 
 header .mobile-content ul {
@@ -63,14 +82,14 @@ header .mobile-content li {
 /* Main Content */
 
 .main-content {
-  margin-top: 64px;
+  margin-top: 4rem;
 }
 
 /* Banner */
 
 #banner {
   display: flex;
-  padding: 32px 24px;
+  padding: 2rem 1.5rem;
   background-color: lightgrey;
 }
 
@@ -89,16 +108,19 @@ header .mobile-content li {
 }
 
 #banner .text {
-  width: 100%;
-  padding-left: 24px;
+  width: 80%;
+  padding-left: 1.5rem;
+}
+
+#banner .text h2 {
+  margin: 1.5rem 0;
 }
 
 #banner .start-button {
-  padding: 8px 0;
+  padding: 0.5rem 0;
   background-color: #4A4A4A;
   width: 100%;
   text-align: center;
-  margin-top: 24px;
 }
 
 #banner .start-button a {
@@ -120,7 +142,8 @@ header .mobile-content li {
   }
 
   #banner .text {
-    padding: 32px 16px;
+    width: 100%;
+    padding: 2rem 1rem;
   }
 }
 
@@ -132,22 +155,34 @@ header .mobile-content li {
 
 #academy-info .testimonial-container {
   width: 60%;
-  padding: 32px 24px;
+  padding: 2rem 1.5rem;
 }
 
 #academy-info .testimonial-container img {
   width: 100%;
 }
 
+#academy-info .testimonial-container h1 {
+  margin-top: 2rem;
+}
+
+#academy-info .testimonial-container p {
+  margin: 1.5rem 0;
+}
+
 #academy-info .info-modules-container {
   width: 40%;
-  padding: 16px 0;
+  padding: 1rem 0;
   border-left: 1px solid lightgrey;
 }
 
 #academy-info .info-module {
   display: flex;
-  padding: 16px;
+  padding: 1rem;
+}
+
+#academy-info .info-module .text p {
+  margin: 0.5rem 0;
 }
 
 #academy-info .info-module .desktop.image-container {
@@ -174,7 +209,11 @@ header .mobile-content li {
 }
 
 #academy-info .info-module .text-container .text {
-  padding-left: 16px;
+  padding-left: 1rem;
+}
+
+#academy-info .read-more a {
+  color: dodgerblue;
 }
 
 @media only screen and (min-width: 701px) {
@@ -205,20 +244,20 @@ header .mobile-content li {
   }
 
   #academy-info .info-module .text-container .text {
-    padding: 32px 16px;
+    padding: 2rem 1rem;
   }
 }
 
 /* Courses */
 
 #courses {
-  padding: 32px 72px;
+  padding: 2rem 4.5rem;
   background: lightgrey;
 }
 
 #courses h1 {
   text-align: center;
-  padding-bottom: 32px;
+  padding-bottom: 2rem;
 }
 
 #courses .first-row, .second-row {
@@ -226,7 +265,7 @@ header .mobile-content li {
 }
 
 #courses .second-row {
-  margin-top: 32px;
+  margin-top: 2rem;
 }
 
 #courses .course-item {
@@ -240,11 +279,16 @@ header .mobile-content li {
 }
 
 #courses .course-item.center {
-  margin: 0 32px;
+  margin: 0 2rem;
 }
 
 #courses .course-item .text {
-  padding: 16px 16px 24px 16px;
+  padding: 1rem 1rem 1.5rem 1rem;
+}
+
+#courses .course-item .label {
+  margin: 0.5rem 0;
+  text-transform: uppercase;
 }
 
 @media only screen and (min-width: 701px) {
@@ -257,11 +301,11 @@ header .mobile-content li {
   #courses {
     background-color: white;
     border-top: 1px solid lightgrey;
-    padding: 32px 16px;
+    padding: 2rem 1rem;
   }
 
   #courses h1 {
-    padding-bottom: 8px;
+    padding-bottom: 0.5rem;
   }
 
   #courses .desktop {
@@ -269,24 +313,24 @@ header .mobile-content li {
   }
 
   #courses .mobile ul li {
-    margin-top: 8px;
+    margin-top: 0.5rem;
   }
 
   #courses .mobile li h2 {
     background-color: lightgrey;
-    padding: 24px 16px;
+    padding: 1.5rem 1rem;
   }
 }
 
 /* Thesis Exhibit */
 
 #thesis {
-  padding: 32px 0 32px 24px;
+  padding: 2rem 0 2rem 1.5rem;
 }
 
 #thesis h1 {
   text-align: center;
-  padding-bottom: 32px;
+  padding-bottom: 2rem;
 }
 
 #thesis .thesis-container {
@@ -302,15 +346,19 @@ header .mobile-content li {
   height: auto;
 }
 
+#thesis .video-thesis .text-container h2 {
+  margin: 1.5rem 0 0.5rem 0;
+}
+
 #thesis .thesis-modules-container {
   width: 40%;
   border-left: 1px solid lightgrey;
-  margin-left: 24px;
+  margin-left: 1.5rem;
 }
 
 #thesis .thesis-module {
   display: flex;
-  padding: 16px;
+  padding: 1rem;
 }
 
 #thesis .thesis-module .image-container {
@@ -329,7 +377,11 @@ header .mobile-content li {
 }
 
 #thesis .text-container .text {
-  padding-left: 16px;
+  padding-left: 1rem;
+}
+
+#thesis .text-container p {
+  margin: 0.5rem 0;
 }
 
 @media only screen and (max-width: 700px) {
@@ -337,7 +389,7 @@ header .mobile-content li {
     padding-left: 0;
   }
 
-  .thesis-modules-container {
+  #thesis .thesis-modules-container {
     display: none;
   }
 
@@ -356,13 +408,13 @@ header .mobile-content li {
 footer .content {
   display: flex;
   justify-content: space-between;
-  margin: 0 24px;
+  margin: 0 1.5rem;
   border-top: 1px solid lightgrey;
-  padding: 16px 0 32px 0;
+  padding: 1rem 0 2rem 0;
 }
 
 footer .terms-and-privacy span {
-  padding: 16px;
+  padding: 1rem;
 }
 
 @media only screen and (max-width: 700px) {
