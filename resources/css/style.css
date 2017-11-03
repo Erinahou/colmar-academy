@@ -6,6 +6,11 @@ html {
   color: #4A4A4A;
 }
 
+.content-container {
+  max-width: 1680px;
+  margin: 0 auto;
+}
+
 a {
   text-decoration: none;
   color: #4A4A4A;
@@ -24,6 +29,38 @@ h2 {
 
 p {
   line-height: 1.5;
+}
+
+.side-modules-container {
+  width: 40%;
+  border-left: 1px solid lightgrey;
+}
+
+.side-module {
+  display: flex;
+  padding: 1rem;
+}
+
+.side-module .text p {
+  margin: 0.5rem 0;
+}
+
+.side-module .image-container {
+  width: 35%;
+}
+
+.side-module .image-container img {
+  width: 100%;
+}
+
+.side-module .text-container {
+  display: flex;
+  align-items: center;
+  width: 65%;
+}
+
+.side-module .text-container .text {
+  padding-left: 1rem;
 }
 
 /* Header */
@@ -88,13 +125,16 @@ header .mobile-content li {
 /* Banner */
 
 #banner {
-  display: flex;
-  padding: 2rem 1.5rem;
   background-color: lightgrey;
+}
+
+#banner .content-container {
+  display: flex;
 }
 
 #banner .image-container {
   width: 60%;
+  padding: 2rem 1.5rem;
 }
 
 #banner .image-container img {
@@ -116,25 +156,51 @@ header .mobile-content li {
   margin: 1.5rem 0;
 }
 
-#banner .start-button {
-  padding: 0.5rem 0;
+#banner .start-button a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2rem;
   background-color: #4A4A4A;
+  color: white;
   width: 100%;
   text-align: center;
+  transition: background-color 450ms ease-in,
+  font-size 450ms ease-in; /* Transitions two proeprties at once */
 }
 
-#banner .start-button a {
-  color: white;
+/*
+transition-property: color;
+transition-duration: 1.5s;
+transition-timing-function: linear;
+transition-delay: 0.5s;
+* Has to be in that order
+
+transition: color 1.5s linear 0.5s;
+
+transition: all 1.5s linear 0.5s;
+
+Above: set the transition-property value to all. This will apply the same values to all properties. To effect this, you can use all as a value for transition-property.
+
+all means every value that changes will be transitioned in the same way.
+
+*/
+
+#banner .start-button a:hover {
+  background-color: red;
+  font-size: 18px;
 }
+
+
 
 @media only screen and (max-width: 700px){
-  #banner {
+  #banner .content-container {
     flex-direction: column;
-    padding: 0;
   }
 
   #banner .image-container {
     width: 100%;
+    padding: 0;
   }
 
   #banner .text-container {
@@ -170,60 +236,35 @@ header .mobile-content li {
   margin: 1.5rem 0;
 }
 
-#academy-info .info-modules-container {
-  width: 40%;
+#academy-info p.quote-by {
+  font-size: 0.75rem;
+}
+
+#academy-info .side-modules-container {
   padding: 1rem 0;
-  border-left: 1px solid lightgrey;
-}
-
-#academy-info .info-module {
-  display: flex;
-  padding: 1rem;
-}
-
-#academy-info .info-module .text p {
-  margin: 0.5rem 0;
-}
-
-#academy-info .info-module .desktop.image-container {
-  width: 35%;
-}
-
-#academy-info .info-module .desktop.image-container img {
-  width: 100%;
-}
-
-#academy-info .info-module .mobile.image-container {
-  width: 100%;
-}
-
-#academy-info .info-module .mobile.image-container img {
-  width: 100%;
-  height: auto;
-}
-
-#academy-info .info-module .text-container {
-  display: flex;
-  align-items: center;
-  width: 65%;
-}
-
-#academy-info .info-module .text-container .text {
-  padding-left: 1rem;
 }
 
 #academy-info .read-more a {
   color: dodgerblue;
 }
 
+#academy-info .side-module .mobile.image-container {
+  width: 100%;
+}
+
+#academy-info .side-module .mobile.image-container img {
+  width: 100%;
+  height: auto;
+}
+
 @media only screen and (min-width: 701px) {
-  #academy-info .info-module .mobile.image-container {
+  #academy-info .side-module .mobile.image-container {
     display: none;
   }
 }
 
 @media only screen and (max-width: 700px) {
-  #academy-info .info-module .desktop.image-container {
+  #academy-info .side-module .desktop.image-container {
     display: none;
   }
 
@@ -231,19 +272,19 @@ header .mobile-content li {
     display: none;
   }
 
-  #academy-info .info-modules-container {
+  #academy-info .side-modules-container {
     width: 100%;
   }
 
-  #academy-info .info-module {
+  #academy-info .side-module {
     flex-direction: column;
   }
 
-  #academy-info .info-module .text-container {
+  #academy-info .side-module .text-container {
     width: 100%;
   }
 
-  #academy-info .info-module .text-container .text {
+  #academy-info .side-module .text-container .text {
     padding: 2rem 1rem;
   }
 }
@@ -251,13 +292,16 @@ header .mobile-content li {
 /* Courses */
 
 #courses {
-  padding: 2rem 4.5rem;
   background: lightgrey;
 }
 
 #courses h1 {
   text-align: center;
-  padding-bottom: 2rem;
+  padding-top: 2rem;
+}
+
+#courses .desktop.course-list-container {
+  padding: 2rem 4.5rem;
 }
 
 #courses .first-row, .second-row {
@@ -305,6 +349,7 @@ header .mobile-content li {
   }
 
   #courses h1 {
+    padding-top: 0;
     padding-bottom: 0.5rem;
   }
 
@@ -324,86 +369,54 @@ header .mobile-content li {
 
 /* Thesis Exhibit */
 
-#thesis {
-  padding: 2rem 0 2rem 1.5rem;
-}
-
 #thesis h1 {
   text-align: center;
-  padding-bottom: 2rem;
+  padding-top: 2rem;
 }
 
 #thesis .thesis-container {
   display: flex;
+  padding: 2rem 0 2rem 0;
 }
 
-#thesis .video-thesis {
+#thesis .video-thesis-container {
   width: 60%;
+  padding: 0 1.5rem 0 1.5rem;
 }
 
-#thesis .video-thesis video {
+#thesis .video-thesis-container video {
   width: 100%;
   height: auto;
 }
 
-#thesis .video-thesis .text-container h2 {
+#thesis .video-thesis-container .text-container h2 {
   margin: 1.5rem 0 0.5rem 0;
-}
-
-#thesis .thesis-modules-container {
-  width: 40%;
-  border-left: 1px solid lightgrey;
-  margin-left: 1.5rem;
-}
-
-#thesis .thesis-module {
-  display: flex;
-  padding: 1rem;
-}
-
-#thesis .thesis-module .image-container {
-  width: 35%;
-}
-
-#thesis .thesis-module .image-container img {
-  width: 100%;
-  height: auto;
-}
-
-#thesis .thesis-module .text-container {
-  display: flex;
-  align-items: center;
-  width: 65%;
-}
-
-#thesis .text-container .text {
-  padding-left: 1rem;
-}
-
-#thesis .text-container p {
-  margin: 0.5rem 0;
 }
 
 @media only screen and (max-width: 700px) {
   #thesis {
-    padding-left: 0;
+    border-top: 1px solid lightgrey;
   }
-
-  #thesis .thesis-modules-container {
+  #thesis .side-modules-container {
     display: none;
   }
 
-  #thesis .video-thesis {
+  #thesis .video-thesis-container {
     width: 100%;
+    padding: 0;
   }
 
-  #thesis .video-thesis .text-container {
+  #thesis .video-thesis-container .text-container {
     display: none;
   }
 
 }
 
 /* Footer */
+
+footer span {
+  font-size: 0.75rem;
+}
 
 footer .content {
   display: flex;

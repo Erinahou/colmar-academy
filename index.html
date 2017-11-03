@@ -1,9 +1,6 @@
 <!-- Notes
 - Perhaps add alt tags
-- Simplify Academy Info Section
-- Thesis and info section can share the same css?
 - Make sure tag labels are consistent
-- Make sure buttons or sections that should be links are links
 - See whether styling is ok to be done on media queries vs outside media queries
 -->
 <!DOCTYPE html>
@@ -13,6 +10,7 @@
     <title>Colmar Academy</title>
     <link href="resources/css/reset.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet"> <!-- which one goes first: font or recess? -->
+    <link rel="icon" href="resources/assets/images/favicon.ico" type="image/x-icon">
     <link href="resources/css/style.css" type="text/css" rel="stylesheet">
   </head>
   <body>
@@ -52,35 +50,37 @@
 
       <!-- Banner -->
       <div id="banner">
-        <div class="image-container">
-          <img src="resources/assets/images/banner.jpg">
-        </div>
-        <div class="text-container">
-          <div class="text">
-            <h1>Learn something new everyday</h1>
-            <h2>Lorem ipsum dolor sit amet, consectetur adipscing elit.</h2>
-            <div class="start-button">
-              <a href="#">Start here</a>
+        <div class="content-container">
+          <div class="image-container">
+            <img src="resources/assets/images/banner.jpg">
+          </div>
+          <div class="text-container">
+            <div class="text">
+              <h1>Learn something new everyday</h1>
+              <h2>Lorem ipsum dolor sit amet, consectetur adipscing elit.</h2>
+              <div class="start-button">
+                <a href="#">Start here</a>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
       <!-- Academy Info -->
-      <div id="academy-info">
+      <div id="academy-info" class="content-container">
         <!-- Testimonial Section -->
         <div class="testimonial-container">
           <img src="resources/assets/images/information-main.jpg">
           <div>
             <h1>It doesn't hurt to keep practicing</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non mauris arcu. Quisque suscipit justo vitae felis luctus, vel ultrices libero mollis. Nunc pharetra leo at enim lacinia, non faucibus nibh tempor.</p>
-            <p>Emanuel, Sr Strategist at Hiring.com</p>
+            <p class="quote-by">Emanuel, Sr Strategist at Hiring.com</p>
           </div>
         </div>
         <!-- Info Section -->
-        <div class="info-modules-container">
+        <div class="side-modules-container">
           <!-- Info Module #1 -->
-          <div class="info-module">
+          <div class="side-module">
             <!-- Desktop Image Section -->
             <div class="desktop image-container">
               <img src="resources/assets/images/information-orientation.jpg">
@@ -99,7 +99,7 @@
             </div>
           </div>
           <!-- Info Module #2 -->
-          <div class="info-module">
+          <div class="side-module">
             <div class="desktop image-container">
               <img src="resources/assets/images/information-campus.jpg">
             </div>
@@ -115,7 +115,7 @@
             </div>
           </div>
           <!-- Info Module #3 -->
-          <div class="info-module">
+          <div class="side-module">
             <div class="desktop image-container">
               <img src="resources/assets/images/information-guest-lecture.jpg">
             </div>
@@ -135,6 +135,7 @@
 
       <!-- Courses -->
       <div id="courses">
+        <div class="content-container">
         <h1>Start Learning</h1>
         <div class="desktop course-list-container">
           <!-- First row -->
@@ -202,13 +203,14 @@
             <li><a href="#"><h2>Marketing</h2></a></li>
           </ul>
         </div>
+      </div> <!-- content-container closing tag -->
       </div><!-- Course section closing tag -->
 
       <!-- Thesis Exhibit -->
-      <div id="thesis">
+      <div id="thesis" class="content-container">
         <h1>Thesis Exhibit</h1>
         <div class="thesis-container">
-          <div class="video-thesis">
+          <div class="video-thesis-container">
             <video width="320" height="420" controls>
               <source src="resources/assets/videos/thesis.mp4">
             Your browser does not support the video tag.
@@ -218,8 +220,8 @@
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non mauris arcu. Quisque suscipit justo vitae felis luctus, vel ultrices libero mollis. Nunc pharetra leo at enim lacinia, non faucibus nibh tempor.</p>
             </div>
           </div>
-          <div class="thesis-modules-container">
-            <div class="thesis-module">
+          <div class="side-modules-container">
+            <div class="side-module">
               <div class="image-container">
                 <img src="resources/assets/images/thesis-fisma.jpg">
               </div>
@@ -230,7 +232,7 @@
                 </div>
               </div>
             </div>
-            <div class="thesis-module">
+            <div class="side-module">
               <div class="image-container">
                 <img       src="resources/assets/images/thesis-now-and-then.jpg">
               </div>
