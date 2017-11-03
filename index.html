@@ -20,61 +20,85 @@
       <div class="desktop-content">
         <!-- Logo -->
         <div class="logo">
-          <img src="resources/assets/images/ic-logo.svg">
+          <img src="resources/assets/images/ic-logo.svg" alt="academy logo">
           <span class="logotype">COLMAR ACADEMY</span>
         </div>
         <!-- Primary Nav -->
-        <nav>
-          <ul>
-            <li><a href="#">On Campus</a></li>
-            <li><a href="#">Online</a></li>
-            <li><a href="#">For Companies</a></li>
-            <li><a href="#">Sign in</a></li>
+        <nav role="navigation">
+          <ul role="menubar">
+            <li role="presentation">
+              <a href="#" role="menuitem">On Campus</a>
+            </li>
+            <li role="presentation">
+              <a href="#" role="menuitem">Online</a>
+            </li>
+            <li role="presentation">
+              <a href="#" role="menuitem">For Companies</a>
+            </li>
+            <li role="presentation">
+              <a href="#" role="menuitem">Sign in</a>
+            </li>
           </ul>
         </nav>
       </div>
       <div class="mobile-content">
-        <nav>
-          <ul>
-            <li><a href="#"><img src="resources/assets/images/ic-logo.svg"></a></li>
-            <li><a href="#"><img src="resources/assets/images/ic-on-campus.svg"></a></li>
-            <li><a href="#"><img src="resources/assets/images/ic-online.svg"></a></li>
-            <li><a href="#"><img src="resources/assets/images/ic-login.svg"></a></li>
+        <nav role="navigation">
+          <ul role="menubar">
+            <li>
+              <a href="#">
+                <img src="resources/assets/images/ic-logo.svg" role="menuitem" alt="logo and link to return to homepage">
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="resources/assets/images/ic-on-campus.svg" role="menuitem" alt="link to on campus page">
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="resources/assets/images/ic-online.svg" role="menuitem" alt="link to online courses">
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="resources/assets/images/ic-login.svg" role="menuitem" alt="login">
+              </a>
+            </li>
           </ul>
         </nav>
       </div>
     </header>
 
     <!-- Main Content -->
-    <div class="main-content">
+    <main>
 
       <!-- Banner -->
-      <div id="banner">
+      <section id="banner">
         <div class="content-container">
           <div class="image-container">
-            <img src="resources/assets/images/banner.jpg">
+            <img src="resources/assets/images/banner.jpg" alt="">
           </div>
           <div class="text-container">
             <div class="text">
               <h1>Learn something new everyday</h1>
               <h2>Lorem ipsum dolor sit amet, consectetur adipscing elit.</h2>
               <div class="start-button">
-                <a href="#">Start here</a>
+                <a href="#" role="button">Start here</a>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </section> <!-- Closing tag for banner section -->
 
       <!-- Academy Info -->
-      <div id="academy-info" class="content-container">
+      <section id="academy-info" class="content-container">
         <!-- Testimonial Section -->
         <div class="testimonial-container">
-          <img src="resources/assets/images/information-main.jpg">
+          <img src="resources/assets/images/information-main.jpg" alt="">
           <div>
             <h1>It doesn't hurt to keep practicing</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non mauris arcu. Quisque suscipit justo vitae felis luctus, vel ultrices libero mollis. Nunc pharetra leo at enim lacinia, non faucibus nibh tempor.</p>
-            <p class="quote-by">Emanuel, Sr Strategist at Hiring.com</p>
+            <p class="quote-by" aria-label="testimonial by">Emanuel, Sr Strategist at Hiring.com</p>
           </div>
         </div>
         <!-- Info Section -->
@@ -83,11 +107,11 @@
           <div class="side-module">
             <!-- Desktop Image Section -->
             <div class="desktop image-container">
-              <img src="resources/assets/images/information-orientation.jpg">
+              <img src="resources/assets/images/information-orientation.jpg" alt="">
             </div>
             <!-- Mobile Image Section -->
             <div class="mobile image-container">
-              <img src="resources/assets/images/information-orientation-mobile.jpg">
+              <img src="resources/assets/images/information-orientation-mobile.jpg" alt="">
             </div>
             <!-- Info Module Text Section -->
             <div class="text-container">
@@ -101,10 +125,10 @@
           <!-- Info Module #2 -->
           <div class="side-module">
             <div class="desktop image-container">
-              <img src="resources/assets/images/information-campus.jpg">
+              <img src="resources/assets/images/information-campus.jpg" alt="">
             </div>
             <div class="mobile image-container">
-              <img src="resources/assets/images/information-campus-mobile.jpg">
+              <img src="resources/assets/images/information-campus-mobile.jpg" alt="">
             </div>
             <div class="text-container">
               <div class="text">
@@ -117,10 +141,10 @@
           <!-- Info Module #3 -->
           <div class="side-module">
             <div class="desktop image-container">
-              <img src="resources/assets/images/information-guest-lecture.jpg">
+              <img src="resources/assets/images/information-guest-lecture.jpg" alt="">
             </div>
             <div class="mobile image-container">
-              <img src="resources/assets/images/information-guest-lecture-mobile.jpg">
+              <img src="resources/assets/images/information-guest-lecture-mobile.jpg" alt="">
             </div>
             <div class="text-container">
               <div class="text">
@@ -131,83 +155,83 @@
             </div>
           </div>
         </div>
-      </div>
+      </section> <!-- Closing tag for Academy info section -->
 
       <!-- Courses -->
-      <div id="courses">
+      <section id="courses">
         <div class="content-container">
-        <h1>Start Learning</h1>
-        <div class="desktop course-list-container">
-          <!-- First row -->
-          <div class="first-row">
-            <div class="course-item">
-              <img src="resources/assets/images/course-software.jpg">
-              <div class="text">
-                <h2>Software Engineering</h2>
-                <p class="label">Courses</p>
-                <p>Web Development, Mobile Development, iOT, APIs</p>
+          <h1>Start Learning</h1>
+          <div class="desktop course-list-container">
+            <!-- First row -->
+            <div class="first-row">
+              <div class="course-item">
+                <img src="resources/assets/images/course-software.jpg" alt="">
+                <div class="text">
+                  <h2>Software Engineering</h2>
+                  <p class="label">Courses</p>
+                  <p>Web Development, Mobile Development, iOT, APIs</p>
+                </div>
+              </div>
+              <div class="course-item center">
+                <img src="resources/assets/images/course-computer-art.jpg" alt="">
+                <div class="text">
+                  <h2>Computer Art</h2>
+                  <p class="label">Courses</p>
+                  <p>Imaging & Design, Web Design, Motion Graphics & Visual Effects, Computer Animation</p>
+                </div>
+              </div>
+              <div class="course-item">
+                <img src="resources/assets/images/course-design.jpg" alt="">
+                <div class="text">
+                  <h2>Design</h2>
+                  <p class="label">Courses</p>
+                  <p>User Experience Design, User Research, Visual Design</p>
+                </div>
               </div>
             </div>
-            <div class="course-item center">
-              <img src="resources/assets/images/course-computer-art.jpg">
-              <div class="text">
-                <h2>Computer Art</h2>
-                <p class="label">Courses</p>
-                <p>Imaging & Design, Web Design, Motion Graphics & Visual Effects, Computer Animation</p>
+            <!-- Second row -->
+            <div class="second-row">
+              <div class="course-item">
+                <img src="resources/assets/images/course-data.jpg" alt="">
+                <div class="text">
+                  <h2>Data</h2>
+                  <p class="label">Courses</p>
+                  <p>Data Science, Big Data, SQL, Data Visualization</p>
+                </div>
+              </div>
+              <div class="course-item center">
+                <img src="resources/assets/images/course-business.jpg" alt="">
+                <div class="text">
+                  <h2>Computer Art</h2>
+                  <p class="label">Courses</p>
+                  <p>Product Development, Business Development, Startup</p>
+                </div>
+              </div>
+              <div class="course-item">
+                <img src="resources/assets/images/course-marketing.jpg" alt="">
+                <div class="text">
+                  <h2 class="course-title"><a href="#">Design</a></h2>
+                  <p class="label">Courses</p>
+                  <p>Analytics, Content Marketing, Mobile Marketing</p>
+                </div>
               </div>
             </div>
-            <div class="course-item">
-              <img src="resources/assets/images/course-design.jpg">
-              <div class="text">
-                <h2>Design</h2>
-                <p class="label">Courses</p>
-                <p>User Experience Design, User Research, Visual Design</p>
-              </div>
-            </div>
+          </div><!-- Desktop course list closing tag -->
+          <div class="mobile course-list-container">
+            <ul>
+              <li><a href="#"><h2>Software engineering</h2></a></li>
+              <li><a href="#"><h2>Computer Art</h2></a></li>
+              <li><a href="#"><h2>Design</h2></a></li>
+              <li><a href="#"><h2>Data</h2></a></li>
+              <li><a href="#"><h2>Business</h2></a></li>
+              <li><a href="#"><h2>Marketing</h2></a></li>
+            </ul>
           </div>
-          <!-- Second row -->
-          <div class="second-row">
-            <div class="course-item">
-              <img src="resources/assets/images/course-data.jpg">
-              <div class="text">
-                <h2>Data</h2>
-                <p class="label">Courses</p>
-                <p>Data Science, Big Data, SQL, Data Visualization</p>
-              </div>
-            </div>
-            <div class="course-item center">
-              <img src="resources/assets/images/course-business.jpg">
-              <div class="text">
-                <h2>Computer Art</h2>
-                <p class="label">Courses</p>
-                <p>Product Development, Business Development, Startup</p>
-              </div>
-            </div>
-            <div class="course-item">
-              <img src="resources/assets/images/course-marketing.jpg">
-              <div class="text">
-                <h2 class="course-title"><a href="#">Design</a></h2>
-                <p class="label">Courses</p>
-                <p>Analytics, Content Marketing, Mobile Marketing</p>
-              </div>
-            </div>
-          </div>
-        </div><!-- Desktop course list closing tag -->
-        <div class="mobile course-list-container">
-          <ul>
-            <li><a href="#"><h2>Software engineering</h2></a></li>
-            <li><a href="#"><h2>Computer Art</h2></a></li>
-            <li><a href="#"><h2>Design</h2></a></li>
-            <li><a href="#"><h2>Data</h2></a></li>
-            <li><a href="#"><h2>Business</h2></a></li>
-            <li><a href="#"><h2>Marketing</h2></a></li>
-          </ul>
-        </div>
-      </div> <!-- content-container closing tag -->
-      </div><!-- Course section closing tag -->
+        </div> <!-- content-container closing tag -->
+      </section><!-- Course section closing tag -->
 
       <!-- Thesis Exhibit -->
-      <div id="thesis" class="content-container">
+      <section id="thesis" class="content-container">
         <h1>Thesis Exhibit</h1>
         <div class="thesis-container">
           <div class="video-thesis-container">
@@ -245,8 +269,10 @@
             </div>
           </div>
         </div> <!-- Thesis container closing tag -->
-      </div> <!-- Thesis closing tag -->
-    </div><!-- Main-content closing tag -->
+      </section> <!-- Thesis closing tag -->
+
+    </main><!-- Main-content closing tag -->
+
     <!-- Footer -->
     <footer>
       <div class="content">
